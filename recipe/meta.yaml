@@ -1,5 +1,5 @@
 {% set name = "tardigrade_cmml" %}
-{% set version = "0.3.2" %}
+{% set version = "0.3.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/UCBoulder/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 2b6e4b56882c30f55f02bec66b15dad2f8fc746319d764b72befa80ad5ffb440
+  sha256: 46365711b1112e3f42887ca12978e9ad2086437ff444757ff7fe31865bc35aa9
 
 build:
   number: 0
@@ -46,6 +46,7 @@ requirements:
     - setuptools >=77
     - setuptools_scm >=8
     - eigen >=3.3.7
+    - eigen-abi-devel
     - tardigrade_error_tools >=0.9.8
     - tardigrade_vector_tools >=0.8.7
     - tardigrade_constitutive_tools >=0.8.5
@@ -54,11 +55,6 @@ requirements:
     - tardigrade_hydra >=0.8.0
   run:
     - eigen >=3.3.7
-    - tardigrade_error_tools >=0.9.8
-    - tardigrade_vector_tools >=0.8.7
-    - tardigrade_constitutive_tools >=0.8.5
-    - tardigrade_stress_tools >=0.6.3
-    - tardigrade_micromorphic_tools >=1.4.3
 
 test:
   requires:
