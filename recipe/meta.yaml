@@ -1,5 +1,5 @@
 {% set name = "tardigrade_cmml" %}
-{% set version = "0.3.3" %}
+{% set version = "0.3.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/UCBoulder/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 46365711b1112e3f42887ca12978e9ad2086437ff444757ff7fe31865bc35aa9
+  sha256: 8036ae9264f8953c3cc78efa0f27b330e872f33e77464456522ef1ad38e93330
 
 build:
-  number: 1
+  number: 0
   script_env:
     - SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
   script:
